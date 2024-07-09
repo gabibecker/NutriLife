@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CadastroRestricaoMedActivity">
+
+    <TextView
+        android:id="@+id/textoNutrilife3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="NutriLife"
+        android:textColor="#214B3C"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+         />
+
+    <ImageView
+        android:id="@+id/imagemLogoCadastro2"
+        android:layout_width="172dp"
+        android:layout_height="164dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logocadastro" />
+
+    <TextView
+        android:id="@+id/textoPerguntaRestricaoMed"
+        android:layout_width="295dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="20dp"
+        android:text="Anna você possuí em seu histórico médico algum tipo de restrição alimentar?"
+        app:layout_constraintBottom_toTopOf="@id/checkBoxNao"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imagemLogoCadastro2" />
+
+    <CheckBox
+        android:id="@+id/checkBoxNao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Não."
+        app:layout_constraintBottom_toTopOf="@id/checkBoxSim"
+        app:layout_constraintStart_toStartOf="@id/textoPerguntaRestricaoMed"
+        app:layout_constraintTop_toBottomOf="@id/textoPerguntaRestricaoMed" />
+
+    <CheckBox
+        android:id="@+id/checkBoxSim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Sim."
+        app:layout_constraintBottom_toTopOf="@+id/textoResponsabilidade"
+        app:layout_constraintEnd_toEndOf="@+id/checkBoxNao"
+        app:layout_constraintStart_toStartOf="@id/checkBoxNao"
+        app:layout_constraintTop_toBottomOf="@id/checkBoxNao" />
+
+    <CheckBox
+        android:id="@+id/checkBoxAceitacaoTermos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="10dp"
+        android:background="#A89F9F"
+        android:text="Estou ciente e quero prosseguir."
+        app:layout_constraintBottom_toTopOf="@+id/botaoContinuar3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textoResponsabilidade"/>
+
+    <Button
+        android:id="@+id/botaoContinuar3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Continuar"
+        app:layout_constraintTop_toBottomOf="@id/checkBoxAceitacaoTermos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="#F03045"
+        />
+
+    <TextView
+        android:id="@+id/textoResponsabilidade"
+        android:layout_width="256dp"
+        android:layout_height="95dp"
+        android:background="#A79E9E"
+        android:textColor="@color/black"
+        android:text="NÃO nos responsabilizamos por reações ocasionadas pelo consumo de algum alimento, SEMPRE procure um médico especialista."
+        app:layout_constraintBottom_toTopOf="@+id/checkBoxAceitacaoTermos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/checkBoxSim"
+        android:layout_marginTop="20dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
